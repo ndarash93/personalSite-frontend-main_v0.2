@@ -1,0 +1,25 @@
+@import "../utilities/_variables.scss";
+
+html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background: url("https://unsplash.it/2001");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#root{
+    height: 100%;
+    width: 100%;
+}
+
+.root{
+    height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,29 @@
+@import '../../../utilities/_variables.scss';
+
+
+.navbar {
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+
+    &::after{
+        content: '';
+        display: table;
+        clear: both;
+    }
+
+    .banner {
+        float: left;
+    }
+
+    p {
+        color: $primary-text;
+        font-size: 1em;
+        font-weight: 200;
+    }
+}

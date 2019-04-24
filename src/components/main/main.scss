@@ -1,0 +1,57 @@
+@import '../../../utilities/_variables';
+
+.main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+    .info{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-25%);
+        background: $transparent;
+        text-align: center;
+        min-height: 250px;
+        max-width: 600px;
+        padding-top:25px;
+        padding-right: 20px;
+        padding-left: 20px;
+        width: 80%;
+        border-radius: 12px;
+
+        h1{
+            color: $primary-text;
+            font-size: 2em;
+            padding: 0;
+            margin: 0;
+        }
+        p{
+            color: $primary-text;
+        }
+
+        input[type=email]{
+            width: 90%;
+            border: none;
+            background: white;
+            height: 35px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 20px;
+            padding-left: 10px;
+            box-shadow: 0px 5px 10px;
+        }
+        input[type=submit]{
+            min-width: 6em;
+            border: none;
+            display: block;
+            margin: 20px auto;
+            width: 100px;
+            height: 35px;
+            background-color: $background-color;
+            color: $primary-text;
+            border-radius: 40px;
+        }
+    }
+}
+
