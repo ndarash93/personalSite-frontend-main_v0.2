@@ -9,13 +9,14 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        transform: translateX(-50%) translateY(-25%);
+        transform: translateX(-50%) translateY(-50%);
         background: $transparent;
         text-align: center;
         min-height: 250px;
         max-width: 600px;
         padding-top:25px;
         padding-right: 20px;
+        padding-bottom: 20px;
         padding-left: 20px;
         width: 80%;
         border-radius: 12px;
@@ -51,6 +52,36 @@
             background-color: $background-color;
             color: $primary-text;
             border-radius: 40px;
+        }
+
+        .timer-module{
+            display: inline-block;
+            background: white;
+            font-size: 3em;
+            margin: 0 5px;
+            padding: 0px;
+            width: 1.15em;
+            border-radius: 5px;
+            position: relative;
+
+            &::after{
+                content: '';
+                position: absolute;
+                width: 1px;
+                height: 100%;
+                top: 0;
+                left: 50%;
+                background: lightgray;
+                z-index: 1;
+            }
+
+            .ten{
+                display: inline-block;
+            }
+
+            .one{
+                display: inline-block;
+            }
         }
     }
 }
