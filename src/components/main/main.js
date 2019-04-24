@@ -49,8 +49,7 @@ class Main extends Component {
                 <div className="info">
                     <h1>Coming Soon</h1>
                     <p>
-                        This site in the future will allow me to display projects, tinker around with,
-                        learn and associate with my accomplishments.
+                        This site will represent me based on my resume, education, and personal projects.  Coming June, 2019!
                     </p>
                     <form action="#">
                         <input type="email" placeholder="Email"></input>
