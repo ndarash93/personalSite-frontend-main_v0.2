@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './utilities/css/all.min.css';
 import Navbar from './components/navbar/navbar.js';
 import Main from './components/main/main';
 import './App.css';
