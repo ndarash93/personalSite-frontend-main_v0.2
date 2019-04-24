@@ -39,7 +39,6 @@ class Main extends Component {
                     'TensOfSeconds': Math.floor(seconds/10)
                 }
             })
-            //console.log(this.state);
         }, 1000);
     }
 
