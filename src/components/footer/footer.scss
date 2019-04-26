@@ -1,1 +1,31 @@
-// Footer.scss
+@import '../../utilities/_variables';
+
+.footer{
+    position: absolute;
+    min-height: 100px;
+    width: 100%;
+    background: $transparent;
+    left: 0;
+    bottom: 0;
+
+    .container{
+        background: transparent;
+        width: 150px;
+        height: 100%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @media (min-width: $medium) {
+            width: 150px;
+            margin: 0 auto 0 300px;
+        }
+    }
+
+    i{
+        font-size: 36px;
+        color: white;
+    }
+}
