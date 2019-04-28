@@ -55,19 +55,19 @@ class Main extends Component {
                         <input type="submit"></input>
                     </form>
                     <div className="countdown">
-                        <div className="timer-module">
+                        <div className="timer-module" denomination="days">
                             <div className="ten">{this.state.countdown.TensOfDays}</div>
                             <div className="one">{this.state.countdown.Days}</div>
                         </div>
-                        <div className="timer-module">
+                        <div className="timer-module" denomination="hours">
                             <div className="ten">{this.state.countdown.TensOfHours}</div>
                             <div className="one">{this.state.countdown.Hours}</div>
                         </div>
-                        <div className="timer-module">
+                        <div className="timer-module" denomination="minutes">
                             <div className="ten">{this.state.countdown.TensOfMinutes}</div>
                             <div className="one">{this.state.countdown.Minutes}</div>
                         </div>
-                        <div className="timer-module">
+                        <div className="timer-module" denomination="seconds">
                             <div className="ten">{this.state.countdown.TensOfSeconds}</div>
                             <div className="one">{this.state.countdown.Seconds}</div>
                         </div>

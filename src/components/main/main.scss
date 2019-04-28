@@ -16,7 +16,7 @@
         max-width: 600px;
         padding-top:25px;
         padding-right: 20px;
-        padding-bottom: 20px;
+        padding-bottom: 30px;
         padding-left: 20px;
         width: 80%;
         border-radius: 12px;
@@ -64,7 +64,7 @@
             border-radius: 5px;
             position: relative;
 
-            &::after{
+            &::before{
                 content: '';
                 position: absolute;
                 width: 1px;
@@ -73,6 +73,17 @@
                 left: 50%;
                 background: lightgray;
                 z-index: 1;
+            }
+
+            &::after{
+                content: attr(denomination);
+                position: absolute;
+                top: 110%;
+                left: 50%;
+                transform: translateX(-50%);
+                color: white;
+                font-size: .25em;
+                text-transform: capitalize;
             }
 
             .ten{

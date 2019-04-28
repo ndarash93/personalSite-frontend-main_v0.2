@@ -16,7 +16,7 @@
   max-width: 600px;
   padding-top: 25px;
   padding-right: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   padding-left: 20px;
   width: 80%;
   border-radius: 12px;
@@ -69,7 +69,7 @@
   position: relative;
 }
 
-.main .info .timer-module::after {
+.main .info .timer-module::before {
   content: '';
   position: absolute;
   width: 1px;
@@ -78,6 +78,18 @@
   left: 50%;
   background: lightgray;
   z-index: 1;
+}
+
+.main .info .timer-module::after {
+  content: attr(denomination);
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: white;
+  font-size: .25em;
+  text-transform: capitalize;
 }
 
 .main .info .timer-module .ten {

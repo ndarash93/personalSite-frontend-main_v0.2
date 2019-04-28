@@ -26,8 +26,8 @@
 
 @media (min-width: 600px) {
   .footer .container {
-    width: 150px;
     margin: 0 auto 0 300px;
+    width: 150px;
   }
 }
 
