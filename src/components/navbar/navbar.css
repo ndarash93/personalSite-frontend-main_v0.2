@@ -1,27 +1,123 @@
 .navbar {
-  background: rgba(0, 0, 0, 0.5);
+  background: transparent;
   position: fixed;
   width: 100vw;
+  height: 50px;
   top: 0;
   left: 0;
   margin: 0;
   padding: 0;
   display: inline-block;
-}
-
-.navbar::after {
-  content: '';
-  display: table;
-  clear: both;
+  z-index: 1;
 }
 
 .navbar .banner {
-  float: left;
+  position: absolute;
+  height: 100%;
+  padding-left: .5em;
+  font-size: 2.6em;
+  vertical-align: middle;
+  color: #2db2c8;
+  background: pink;
 }
 
-.navbar p {
-  color: #2db2c8;
-  font-size: 1em;
-  font-weight: 200;
+.navbar .nav-menu {
+  position: absolute;
+  height: 100%;
+  width: 4em;
+  right: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: solid black 3px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.navbar .nav-menu-bar {
+  position: absolute;
+  height: 5px;
+  width: 70%;
+  background: black;
+  left: 15%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 5px;
+}
+
+.navbar .nav-menu-bar::before {
+  content: '';
+  position: absolute;
+  top: -200%;
+  width: 100%;
+  height: 5px;
+  background: black;
+  border-radius: 5px;
+}
+
+.navbar .nav-menu-bar::after {
+  content: '';
+  position: absolute;
+  bottom: -200%;
+  width: 100%;
+  height: 5px;
+  background: black;
+  border-radius: 5px;
+}
+
+.navbar .nav-menu-list-closed, .navbar .nav-menu-list-open {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  margin: 0;
+  padding: 0;
+  color: white;
+  display: block;
+  list-style: none;
+  background: #2db2c8;
+  border-radius: 5px;
+  -webkit-transform: scaleX(0) scaleY(0);
+          transform: scaleX(0) scaleY(0);
+  -webkit-transform-origin: 75% 0%;
+          transform-origin: 75% 0%;
+  -webkit-transition: -webkit-transform 250ms ease-in-out;
+  transition: -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out, -webkit-transform 250ms ease-in-out;
+}
+
+.navbar .nav-menu-list-closed li, .navbar .nav-menu-list-open li {
+  position: relative;
+  padding: 1em 2em;
+  border-bottom: solid #38dffa 1px;
+  text-align: center;
+}
+
+.navbar .nav-menu-list-closed li:last-child, .navbar .nav-menu-list-open li:last-child {
+  border: none;
+}
+
+.navbar .nav-menu-list-closed li::after, .navbar .nav-menu-list-open li::after {
+  content: '';
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 5px;
+  width: 0%;
+  background: #38dffa;
+  -webkit-transition: 250ms width ease-in-out;
+  transition: 250ms width ease-in-out;
+  border-radius: 5px;
+}
+
+.navbar .nav-menu-list-closed li:hover::after, .navbar .nav-menu-list-open li:hover::after {
+  width: 50%;
+}
+
+.navbar .nav-menu-list-open {
+  -webkit-transform: scaleX(1) scaleY(1);
+          transform: scaleX(1) scaleY(1);
 }
 /*# sourceMappingURL=navbar.css.map */

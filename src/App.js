@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import './utilities/css/all.min.css';
 import Navbar from './components/navbar/navbar.js';
-import Main from './components/main/main';
+import Home from './components/Home/home';
 import './App.css';
 
 class App extends Component {
   constructor(props){
     super(props);
-    this.state = {};
+    this.state = {
+      'renderedPage': <Home />
+    };
   }
 
   componentDidMount(){
@@ -18,7 +20,9 @@ class App extends Component {
     return (
       <div className="root">
         <Navbar />
-        <Main />
+        <div className="content">
+          {this.state.renderedPage}
+        </div>
       </div>
     );
   }

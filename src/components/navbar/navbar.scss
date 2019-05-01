@@ -1,29 +1,121 @@
 @import '../../utilities/_variables.scss';
 
+ .navbar {
+  background: transparent;
+  position: fixed;
+  width: 100vw;
+  height: 50px;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  z-index: 1;
 
-.navbar {
-    background: rgba(0, 0, 0, .5);
-    position: fixed;
-    width: 100vw;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    display: inline-block;
+  .banner {
+    position: absolute;
+    height: 100%;
+    padding-left: .5em;
+    font-size: 2.6em;
+    vertical-align: middle;
+    color: $primary-text;
+    background: pink;
+  }
+
+  .nav-menu{
+    position: absolute;
+    height: 100%;
+    width: 4em;
+    right: 0;
+    box-sizing: border-box;
+    border: solid black 3px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .nav-menu-bar{
+    $bar-height: 5px;
+    $bar-background: black;
+    $bar-radius: 5px;
+    
+    position: absolute;
+    height: $bar-height;
+    width: 70%;
+    background: black;
+    left: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: $bar-radius;
+
+    &::before{
+      content: '';
+      position: absolute;
+      top: -200%;
+      width: 100%;
+      height: $bar-height;
+      background: $bar-background;
+      border-radius: $bar-radius;
+    }
 
     &::after{
+      content: '';
+      position: absolute;
+      bottom: -200%;
+      width: 100%;
+      height: $bar-height;
+      background: $bar-background;
+      border-radius: $bar-radius;
+    }
+  }
+
+  .nav-menu-list-closed{
+    position: absolute;
+    right: 0;
+    top: 50px;
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: block;
+    list-style: none;
+    background: $primary-text; 
+    border-radius: 5px;
+    transform: scaleX(0) scaleY(0);
+    transform-origin: 75% 0%;
+    transition: transform 250ms ease-in-out;
+
+    li{
+      position: relative;
+      padding: 1em 2em;
+      border-bottom: solid $primary-text*1.25 1px;
+      text-align: center;
+
+      &:last-child{
+        border: none;
+      }
+
+      &::after{
         content: '';
-        display: table;
-        clear: both;
-    }
+        position: absolute;
+        bottom: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 5px;
+        width: 0%;
+        background: $primary-text*1.25;
+        transition: 250ms width ease-in-out;
+        border-radius: 5px;
+      }
 
-    .banner {
-        float: left;
+      &:hover{
+        &::after{
+          width: 50%;
+        }
+      }
     }
+  }
 
-    p {
-        color: $primary-text;
-        font-size: 1em;
-        font-weight: 200;
-    }
+  .nav-menu-list-open{
+    @extend .nav-menu-list-closed;
+    transform: scaleX(1) scaleY(1);
+  }
 }
