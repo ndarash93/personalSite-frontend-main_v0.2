@@ -61,10 +61,10 @@
 .main .info .timer-module {
   display: inline-block;
   background: white;
-  font-size: 3em;
+  font-size: 2.75em;
   margin: 0 5px;
   padding: 0px;
-  width: 1.15em;
+  width: 1.3em;
   border-radius: 5px;
   position: relative;
 }
@@ -94,9 +94,11 @@
 
 .main .info .timer-module .ten {
   display: inline-block;
+  width: 50%;
 }
 
 .main .info .timer-module .one {
   display: inline-block;
+  width: 50%;
 }
 /*# sourceMappingURL=main.css.map */
