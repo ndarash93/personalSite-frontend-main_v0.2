@@ -53,6 +53,16 @@
   -ms-grid-column: 1;
   grid-area: summary;
   background: white;
+  color: black;
+}
+
+.home .summary h1 {
+  margin: 5%;
+  color: #2db2c8;
+}
+
+.home .summary p {
+  margin: 0 10%;
 }
 
 .home .main {

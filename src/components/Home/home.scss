@@ -52,6 +52,16 @@
     position: relative;
     grid-area: summary;
     background: white;
+    color: black;
+    
+    h1{
+      margin: 5%;
+      color: $primary-text;
+    }
+
+    p{
+      margin: 0 10%;
+    }
   }
 
   .main{

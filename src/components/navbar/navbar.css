@@ -92,6 +92,7 @@
   padding: 1em 2em;
   border-bottom: solid #38dffa 1px;
   text-align: center;
+  color: lightgray;
 }
 
 .navbar .nav-menu-list-closed li:last-child, .navbar .nav-menu-list-open li:last-child {
@@ -115,6 +116,10 @@
 
 .navbar .nav-menu-list-closed li:hover::after, .navbar .nav-menu-list-open li:hover::after {
   width: 50%;
+}
+
+.navbar .nav-menu-list-closed li.active, .navbar .nav-menu-list-open li.active {
+  color: white;
 }
 
 .navbar .nav-menu-list-open {

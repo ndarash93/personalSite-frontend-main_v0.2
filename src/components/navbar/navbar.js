@@ -10,10 +10,10 @@ class Navbar extends Component {
           'About',
           'Skills',
           'Projects',
-          'Blog',
           'Contact'
         ],
-        'menuClassList': 'nav-menu-list-closed'
+        'menuClassList': 'nav-menu-list-closed',
+        'activePage': 0
       }
     }
 
@@ -25,6 +25,10 @@ class Navbar extends Component {
       }
     }
 
+    handleActivePage = (target) => {
+      this.setState({activePage: target})
+    }
+
     render() {
       return (
         <nav className="navbar">
@@ -34,9 +38,15 @@ class Navbar extends Component {
               <ul className={this.state.menuClassList}>
               {
                 this.state.pages.map((page, i) => {
-                  return(
-                  <li className="nav-list-item" key={i}>{page}</li>
-                  );
+                  if(this.state.activePage === i){
+                    return(
+                    <li className="nav-list-item active" onClick={_ => this.handleActivePage(i)} key={i}>{page}</li>
+                    );
+                  }else{
+                    return(
+                      <li className="nav-list-item" onClick={ _ => this.handleActivePage(i)} key={i}>{page}</li>
+                    );
+                  }
                 })
               }
               </ul>

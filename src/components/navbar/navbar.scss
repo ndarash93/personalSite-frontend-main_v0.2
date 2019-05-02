@@ -89,6 +89,7 @@
       padding: 1em 2em;
       border-bottom: solid $primary-text*1.25 1px;
       text-align: center;
+      color: lightgray;
 
       &:last-child{
         border: none;
@@ -111,6 +112,10 @@
         &::after{
           width: 50%;
         }
+      }
+
+      &.active{
+        color: white;
       }
     }
   }
