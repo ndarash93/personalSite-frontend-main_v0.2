@@ -1,0 +1,25 @@
+.footer {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: #1B1B1B;
+}
+
+.footer i {
+  position: absolute;
+  color: white;
+  font-size: 2.5em;
+}
+
+.footer .github {
+  left: 0%;
+}
+
+.footer .twitter {
+  left: 10%;
+}
+
+.footer .linkedin {
+  left: 20%;
+}
+/*# sourceMappingURL=footer.css.map */

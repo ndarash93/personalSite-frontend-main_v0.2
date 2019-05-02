@@ -1,25 +1,26 @@
 @import '../../utilities/_variables.scss';
 
  .navbar {
-  background: transparent;
+  background: $primary-text;
   position: fixed;
-  width: 100vw;
+  width: 100%;
   height: 50px;
   top: 0;
   left: 0;
   margin: 0;
   padding: 0;
   display: inline-block;
-  z-index: 1;
+  z-index: 2;
 
   .banner {
     position: absolute;
     height: 100%;
-    padding-left: .5em;
-    font-size: 2.6em;
-    vertical-align: middle;
-    color: $primary-text;
-    background: pink;
+    width: 100%;
+    padding: 0;
+    font-size: 1.6em;
+    text-align: center;
+    color: white;
+    top: 25%;
   }
 
   .nav-menu{
@@ -28,20 +29,20 @@
     width: 4em;
     right: 0;
     box-sizing: border-box;
-    border: solid black 3px;
+    border: solid white 3px;
     border-radius: 10px;
     cursor: pointer;
   }
 
   .nav-menu-bar{
     $bar-height: 5px;
-    $bar-background: black;
+    $bar-background: white;
     $bar-radius: 5px;
     
     position: absolute;
     height: $bar-height;
     width: 70%;
-    background: black;
+    background: $bar-background;
     left: 15%;
     top: 50%;
     transform: translateY(-50%);

@@ -5,11 +5,58 @@
   height: 100%;
   display: grid;
   grid-template-areas: 
-  "
-  banner
-  summary
-  main
-  "
+  'banner'
+  'summary'
+  'main';
+  grid-template-rows: calc(100vh - 50px) repeat(2, minmax(200px, auto));
 
-  
+  .banner{
+    grid-area: banner;
+    background-image: url(https://s3.us-east-2.amazonaws.com/nickdarash/LAB.fe0615df.jpg);
+    
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+    .cover{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: $transparent;
+      z-index: 0;
+    }
+
+    .title{
+      position: absolute;
+      color: $primary-text;
+      z-index: 1;
+      font-size: 3em;
+      left: 5%;
+      top: 45%;
+      font-style: italic;
+    }
+
+    .subTitle{
+      position: absolute;
+      color: white;
+      z-index: 1;
+      font-size: 2em;
+      left: 30%;
+      top: 55%;
+      font-style: italic;
+    }
+  }
+
+  .summary{
+    position: relative;
+    grid-area: summary;
+    background: white;
+  }
+
+  .main{
+    position: relative;
+    grid-area: main;
+    background: transparent;
+  }
 }

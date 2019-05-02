@@ -3,6 +3,63 @@
   height: 100%;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: " banner summary main ";
+      grid-template-areas: 'banner' 'summary' 'main';
+  -ms-grid-rows: calc(100vh - 50px) (minmax(200px, auto))[2];
+      grid-template-rows: calc(100vh - 50px) repeat(2, minmax(200px, auto));
+}
+
+.home .banner {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: banner;
+  background-image: url(https://s3.us-east-2.amazonaws.com/nickdarash/LAB.fe0615df.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.home .banner .cover {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.home .banner .title {
+  position: absolute;
+  color: #2db2c8;
+  z-index: 1;
+  font-size: 3em;
+  left: 5%;
+  top: 45%;
+  font-style: italic;
+}
+
+.home .banner .subTitle {
+  position: absolute;
+  color: white;
+  z-index: 1;
+  font-size: 2em;
+  left: 30%;
+  top: 55%;
+  font-style: italic;
+}
+
+.home .summary {
+  position: relative;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: summary;
+  background: white;
+}
+
+.home .main {
+  position: relative;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: main;
+  background: transparent;
 }
 /*# sourceMappingURL=home.css.map */

@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "banner.scss",
+        "../../utilities/_variables.scss"
+    ],
+    "names": [],
+    "file": "banner.css"
+}

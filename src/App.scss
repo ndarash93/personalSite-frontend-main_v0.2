@@ -1,12 +1,12 @@
 @import "./utilities/_variables.scss";
 
 html{
-    height: 100%;
+    height: auto;
     width: 100%;
 }
 
 body{
-    height: 100%;
+    height: auto;
     width: 100%;
     //background: url("https://unsplash.it/2001");
     background: white;
@@ -16,20 +16,20 @@ body{
 }
 
 #root{
-    height: 100%;
+    height: auto;
     width: 100%;
 }
 
 .root{
     position: relative;
-    height: 100%;
+    height: auto;
     width: 100%;
 }
 
 .content{
-    position: absolute;
-    background: powderblue;
-    top: 50px;
+    position: relative;
+    background: white;
     width: 100%;
-    height: calc(100% - 50px);
+    margin-top: 50px;
+    height: auto;
 }
