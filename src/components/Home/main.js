@@ -13,7 +13,7 @@ class Main extends Component{
   render() {
     return(
       <div className="main">
-        Recent Projects:
+        <p>Recent Projects: </p>
         
       </div>
     );

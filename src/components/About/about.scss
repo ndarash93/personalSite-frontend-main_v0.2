@@ -1,0 +1,15 @@
+@import '../../utilities/variables';
+
+.about{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-areas: 
+    'banner'
+    'mission'
+    'interests'
+    'education'
+    'job';
+    grid-template-rows: calc(100vh - 50px) repeat(5, minmax(200px, auto));
+}

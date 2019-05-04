@@ -1,0 +1,11 @@
+.about {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'banner' 'mission' 'interests' 'education' 'job';
+  -ms-grid-rows: calc(100vh - 50px) (minmax(200px, auto))[5];
+      grid-template-rows: calc(100vh - 50px) repeat(5, minmax(200px, auto));
+}
+/*# sourceMappingURL=about.css.map */

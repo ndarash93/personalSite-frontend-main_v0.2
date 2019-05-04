@@ -5,15 +5,7 @@ class Navbar extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        'pages': [
-          'Home',
-          'About',
-          'Skills',
-          'Projects',
-          'Contact'
-        ],
-        'menuClassList': 'nav-menu-list-closed',
-        'activePage': 0
+        'menuClassList': 'nav-menu-list-closed'
       }
     }
 
@@ -25,10 +17,6 @@ class Navbar extends Component {
       }
     }
 
-    handleActivePage = (target) => {
-      this.setState({activePage: target})
-    }
-
     render() {
       return (
         <nav className="navbar">
@@ -37,14 +25,14 @@ class Navbar extends Component {
             <div className="nav-menu-bar"></div>
               <ul className={this.state.menuClassList}>
               {
-                this.state.pages.map((page, i) => {
-                  if(this.state.activePage === i){
+                this.props.pages.map((page, i) => {
+                  if(this.props.activePage === i){
                     return(
-                    <li className="nav-list-item active" onClick={_ => this.handleActivePage(i)} key={i}>{page}</li>
+                    <li className="nav-list-item active" onClick={_ => this.props.handleActivePage(i)} key={i}>{page.pageTitle}</li>
                     );
                   }else{
                     return(
-                      <li className="nav-list-item" onClick={ _ => this.handleActivePage(i)} key={i}>{page}</li>
+                      <li className="nav-list-item" onClick={ _ => this.props.handleActivePage(i)} key={i}>{page.pageTitle}</li>
                     );
                   }
                 })

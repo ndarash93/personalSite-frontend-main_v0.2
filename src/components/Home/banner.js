@@ -14,7 +14,7 @@ class Banner extends Component{
       <div className="banner">
         <div className="cover"></div>
         <h1 className="title">Nick Darash</h1>
-        <h2 className="subTitle">Personal Site</h2>
+        <h2 className="subTitle">Electrical Engineer</h2>
       </div>
     );
   }
