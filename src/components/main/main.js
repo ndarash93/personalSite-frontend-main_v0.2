@@ -20,7 +20,7 @@ class Main extends Component {
 
     componentDidMount(){
         setInterval(() => {
-            const estimatedDate = new Date("May 25, 2019 12:00:00").getTime();
+            const estimatedDate = new Date("June 23, 2019 12:00:00").getTime();
             const now = new Date().getTime();
             const time = estimatedDate - now;
             const days = Math.floor(time/(1000*60*60*24));
