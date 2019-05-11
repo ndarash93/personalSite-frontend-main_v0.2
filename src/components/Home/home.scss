@@ -14,7 +14,7 @@
   .banner{
     grid-area: banner;
     background-image: url(https://s3.us-east-2.amazonaws.com/nickdarash/LAB.fe0615df.jpg);
-    
+    background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

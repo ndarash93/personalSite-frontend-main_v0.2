@@ -1,11 +1,102 @@
 .about {
   position: relative;
+  background-color: white;
   width: 100%;
   height: 100%;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'banner' 'mission' 'interests' 'education' 'job';
-  -ms-grid-rows: calc(100vh - 50px) (minmax(200px, auto))[5];
-      grid-template-rows: calc(100vh - 50px) repeat(5, minmax(200px, auto));
+      grid-template-areas: 'mission' 'interests' 'education' 'career';
+  -ms-grid-rows: (minmax(200px, auto))[4];
+      grid-template-rows: repeat(4, minmax(200px, auto));
+}
+
+.about .mission {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: mission;
+  position: relative;
+}
+
+.about .mission p {
+  font-weight: 200;
+  font-size: 14px;
+  text-indent: 20px;
+  margin: 10px;
+}
+
+.about .mission .head {
+  width: auto;
+  color: black;
+  font-size: 28px;
+  font-weight: 100;
+  text-align: center;
+  margin: 10px;
+}
+
+.about .interests {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: interests;
+  position: relative;
+}
+
+.about .education {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: education;
+  position: relative;
+}
+
+.about .education img {
+  width: 100%;
+}
+
+.about .education p {
+  margin: 5%;
+  width: 90%;
+  text-indent: 20px;
+  font-size: 14px;
+}
+
+.about .education .section-header {
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+.about .career {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: career;
+  position: relative;
+}
+
+.about .career img {
+  width: 100%;
+}
+
+.about .title {
+  width: auto;
+  color: gray;
+  font-size: 22px;
+  font-weight: 100;
+  text-align: center;
+  margin: 10px;
+}
+
+.about .subTitle {
+  color: #2db2c8;
+  text-align: center;
+  margin: 10px;
+}
+
+.about .divider {
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  width: 80%;
+  margin-left: 10%;
+  background-color: lightgray;
 }
 /*# sourceMappingURL=about.css.map */

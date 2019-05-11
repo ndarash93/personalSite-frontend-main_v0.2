@@ -1,15 +1,98 @@
 @import '../../utilities/variables';
 
 .about{
+  position: relative;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas: 
+  'mission'
+  'interests'
+  'education'
+  'career';
+  grid-template-rows: repeat(4, minmax(200px, auto));
+
+  .mission{
+    grid-area: mission;
     position: relative;
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-areas: 
-    'banner'
-    'mission'
-    'interests'
-    'education'
-    'job';
-    grid-template-rows: calc(100vh - 50px) repeat(5, minmax(200px, auto));
+
+    p{
+      font-weight: 200;
+      font-size: 14px;
+      text-indent: 20px;
+      margin: 10px;
+    }
+
+    .head{
+      width: auto;
+      color: black;
+      font-size: 28px;
+      font-weight: 100;
+      text-align: center;
+      margin: 10px;
+    }
+  }
+
+  .interests{
+    grid-area: interests;
+    position: relative;
+  }
+
+  .education{
+    grid-area: education;
+    position: relative;
+
+    img{
+      width: 100%;      
+    }
+
+    p{
+      margin: 5%;
+      width: 90%;
+      text-indent: 20px;
+      font-size: 14px;
+      
+    }
+
+    .section-header{
+      font-weight: 400;
+      width: 100%;
+      text-align: center;
+      font-size: 18px;
+    }
+  }
+
+  .career{
+    grid-area: career;
+    position: relative;
+
+    img{
+      width: 100%;
+    }
+  }
+
+  .title{
+    width: auto;
+    color: gray;
+    font-size: 22px;
+    font-weight: 100;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .subTitle{
+    color: $primary-text;
+    text-align: center;
+    margin: 10px;
+  }
+
+  .divider{
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: 80%;
+    margin-left: 10%;
+    background-color: lightgray;
+  }
 }

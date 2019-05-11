@@ -20,12 +20,12 @@ class App extends Component {
           'pageTitle': 'About'
         }
       ],
-      activePage: 0
+      activePage: 1
     };
   }
 
   componentDidMount(){
-    document.title = 'Nick Darash | Home'
+    document.title = 'Nick Darash | ' + this.state.pages[this.state.activePage].pageTitle;
   }
 
   handleActivePage = (target) => {
