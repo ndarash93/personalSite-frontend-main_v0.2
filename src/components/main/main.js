@@ -20,7 +20,7 @@ class Main extends Component {
 
     componentDidMount(){
         setInterval(() => {
-            const estimatedDate = new Date("June 23, 2019 12:00:00").getTime();
+            const estimatedDate = new Date("June 23, 2020 12:00:00").getTime();
             const now = new Date().getTime();
             const time = estimatedDate - now;
             const days = Math.floor(time/(1000*60*60*24));
@@ -48,7 +48,7 @@ class Main extends Component {
                 <div className="info">
                     <h1>Coming Soon</h1>
                     <p>
-                        This site will represent me based on my resume, education, and personal projects.  Coming June, 2019!
+                        This site will represent me based on my resume, education, and personal projects.  Coming June, 2020!
                     </p>
                     <form action="#">
                         <input type="email" placeholder="Email"></input>
